@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Polymarket RUB Converter by anyjezz",
+  "version": "1.0",
+  "description": "Конвертер shares в рубли на Polymarket",
+  "permissions": ["storage"],
+  "host_permissions": ["https://polymarket.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://polymarket.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Polymarket RUB Converter"
+  }
+}
